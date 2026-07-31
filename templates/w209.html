@@ -102,9 +102,80 @@ h2{font-size:26px;font-weight:700;margin:0 0 14px;line-height:1.2;}
 .step{font-size:16px;color:#444;line-height:1.65;max-width:840px;margin:0;}
 .step.top{margin-bottom:6px;} .step.mid{margin:22px 0 6px;}
 
-footer{background:var(--purple-soft);border-top:1px solid var(--border);padding:40px 32px;
+footer{background:var(--purple-soft);border-top:1px solid var(--border);padding:44px 32px;
   text-align:center;color:var(--muted);font-size:13.5px;line-height:1.7;}
 footer b{color:var(--ink);}
+
+/* Reveal-section spacing */
+.reveal-summary{max-width:1060px;margin:40px auto 0;}
+.reveal-summary .takeaway{margin:0 0 30px;padding:20px 24px;font-size:15.5px;line-height:1.65;}
+.reveal-summary .lede{max-width:none;margin:0;line-height:1.8;}
+.pm-bridge{margin:28px 0 0;padding:22px 0 0;border-top:1px solid var(--line);
+  color:#555;font-size:14.5px;line-height:1.7;}
+.pm-bridge strong{color:var(--mauve-deep);}
+
+/* Conclusion and usability-study reflection */
+.conclusion-section{padding-top:88px;padding-bottom:96px;}
+.conclusion-copy{max-width:1020px;}
+.study-callout,.value-statement{border-radius:10px;padding:28px 30px;line-height:1.72;}
+.study-callout{margin-top:36px;background:var(--mauve-soft);border-left:4px solid var(--mauve);color:#573346;}
+.value-statement{margin-top:28px;background:var(--purple-soft);border-left:4px solid var(--purple);color:var(--purple-deep);}
+.callout-label{display:block;font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;margin-bottom:10px;}
+.study-callout .callout-label{color:var(--mauve-deep);}
+.value-statement .callout-label{color:var(--purple-deep);}
+.study-callout p,.value-statement p{margin:0;font-size:15.5px;}
+
+/* Spacious product guidance */
+.product-guidance{margin-top:64px;padding-top:54px;border-top:1px solid var(--line);}
+.product-guidance-header{max-width:780px;margin-bottom:32px;}
+.product-guidance-header .eyebrow{font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--mauve);}
+.product-guidance-header h3{font-size:25px;line-height:1.25;margin:9px 0 12px;color:var(--ink);}
+.product-guidance-header p{font-size:15.5px;line-height:1.7;color:#555;margin:0;}
+.guidance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.guidance-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:28px 26px;
+  box-shadow:0 10px 28px rgba(0,0,0,.035);}
+.guidance-number{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;
+  border-radius:999px;background:var(--purple-soft);color:var(--purple-deep);font-size:12px;font-weight:800;margin-bottom:18px;}
+.guidance-card:nth-child(2) .guidance-number{background:var(--mauve-soft);color:var(--mauve-deep);}
+.guidance-card h4{font-size:17px;margin:0 0 10px;line-height:1.35;}
+.guidance-card p{font-size:14px;line-height:1.68;color:#555;margin:0;}
+.guidance-note{font-size:12.5px;color:var(--muted);margin:18px 2px 0;line-height:1.55;}
+
+/* Collapsible methodology and limitations */
+.methods{margin-top:58px;background:#fff;border:1px solid var(--border);border-radius:10px;
+  box-shadow:0 8px 24px rgba(0,0,0,.035);overflow:hidden;scroll-margin-top:24px;}
+.methods summary{cursor:pointer;list-style:none;padding:22px 26px;font-size:16px;font-weight:750;
+  color:var(--purple-deep);display:flex;justify-content:space-between;align-items:center;gap:18px;}
+.methods summary::-webkit-details-marker{display:none;}
+.methods summary::after{content:"+";font-size:24px;font-weight:400;color:var(--mauve);line-height:1;}
+.methods[open] summary::after{content:"–";}
+.methods[open] summary{border-bottom:1px solid var(--line);}
+.methods-content{padding:28px 26px 30px;display:grid;grid-template-columns:1fr 1fr;gap:26px 34px;}
+.method-item h3{font-size:14px;margin:0 0 7px;color:var(--ink);}
+.method-item p{font-size:13.5px;line-height:1.65;color:#555;margin:0;}
+.method-warning{grid-column:1/-1;background:var(--mauve-soft);border-left:4px solid var(--mauve);
+  padding:17px 19px;border-radius:0 8px 8px 0;font-size:13.5px;line-height:1.65;color:var(--mauve-deep);}
+
+/* Footer credibility links */
+.footer-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px auto 20px;}
+.footer-btn{display:inline-flex;align-items:center;justify-content:center;padding:9px 14px;border-radius:999px;
+  border:1px solid var(--purple);color:var(--purple-deep);background:rgba(255,255,255,.68);
+  font-weight:700;font-size:12.5px;text-decoration:none;transition:transform .18s ease,background .18s ease;}
+.footer-btn:hover{background:#fff;transform:translateY(-1px);}
+.team-line{scroll-margin-top:24px;margin-top:4px;}
+.footer-note{max-width:760px;margin:0 auto;}
+
+@media(max-width:900px){
+  .guidance-grid{grid-template-columns:1fr;}
+  .guidance-card{padding:24px;}
+}
+@media(max-width:720px){
+  .conclusion-section{padding-top:68px;padding-bottom:76px;}
+  .study-callout,.value-statement{padding:23px 22px;}
+  .product-guidance{margin-top:50px;padding-top:44px;}
+  .methods-content{grid-template-columns:1fr;}
+  .method-warning{grid-column:auto;}
+}
 </style>
 </head>
 <body>
@@ -204,7 +275,7 @@ mdRender();
   <div class="reveal card" style="margin-top:20px;">
     <div class="viz filled" style="min-height:900px;">
       <tableau-viz
-        src="https://public.tableau.com/views/Dashboard_TheHunt/Dashboard?:language=en-US&:showVizHome=no"
+        src="https://public.tableau.com/app/profile/chris.white3858/viz/Dashboard_Final2_17854535162730/Dashboard?publish=yes"
         toolbar="bottom"
         hide-tabs
         style="width:100%;height:800px;">
@@ -264,23 +335,23 @@ mdRender();
   </div>
   <div class="reveal d1" style="margin-top:22px;">
     <tableau-viz
-      src="https://public.tableau.com/views/OverlayChart/Dashboard5?:language=en-US&:showVizHome=no"
+      src="https://public.tableau.com/app/profile/chris.white3858/viz/Dashboard_Overlay_Redesigned2/Dashboard5?publish=yes"
       toolbar="bottom"
       hide-tabs
       style="width:100%;height:650px;">
     </tableau-viz>
   </div>
-  <div class="reveal d2" style="margin-top:28px;">
+  <div class="reveal d2 reveal-summary">
     <div class="takeaway"><strong>Takeaway:</strong> Users end up with approximately the same number
       of mutual matches across most likes-received groups. Match rate falls primarily because the
       denominator grows, not because users receive fewer actual matches.</div>
     <p class="lede">So a product manager who optimizes for match rate would be pushing users toward
-      getting <em>fewer</em> likes, which is exactly backwards. Match rate probably is not a metric to
-      trust on its own. As a next step, we want to look into other measures of success, like the raw
-      number of matches or the full swipe-to-like-to-match funnel, and test whether any of them tell a
-      clearer story than match rate does.</p>
-    <div class="turn"><strong>Takeaway for PMs:</strong> a metric can quietly point you the wrong way.
-      Before you optimize for one, make sure it is really tracking the success you care about.</div>
+      getting <em>fewer</em> likes, which is exactly backwards. Match rate is useful context, but it is
+      not a metric to trust on its own. The final section outlines a more complete set of measures that
+      keeps the actual user outcome—not just the ratio—in view.</p>
+    <p class="pm-bridge"><strong>Product implication:</strong> Before optimizing a percentage, check
+      what is happening to both the numerator and denominator—and pair the ratio with the raw outcome
+      users actually care about.</p>
   </div>
 </section>
 
@@ -380,27 +451,101 @@ fxRender();
 </script>
 
 <!-- ================= 5 · CONCLUSION ================= -->
-<section class="section">
-  <div class="reveal"><div class="badge">05 · In conclusion</div>
+<section class="section conclusion-section" id="conclusion">
+  <div class="reveal conclusion-copy">
+    <div class="badge">05 · In conclusion</div>
     <h2>Nothing predicts success here, and that is still useful</h2>
     <p class="lede">Across every trait we grouped by and every outcome we measured, nothing in this
-      dataset predicts who succeeds on the app. A lot of that comes down to the data being synthetic,
-      so there was never a real signal waiting to be found.</p>
-    <div class="reveal d1" style="background:var(--purple-soft);border-left:4px solid var(--purple);padding:18px 22px;border-radius:0 8px 8px 0;margin-top:18px;color:var(--purple-deep);font-size:16px;line-height:1.65;max-width:980px;">
-      The value isn’t the answer, it’s the setup. Everything on this page, the metric check, the
-      interactive explorer, and the funnel view, is a ready-made scaffold. Pointed at real dating-app
-      data, a product manager could quickly see which levers actually move matches, which groups of
-      users behave differently, and whether the metric they report on is tracking real success or just
-      an illusion. We built the lens. Real data would fill in the picture.
+      dataset predicts who succeeds on the app. A lot of that uniformity likely comes from the data
+      being synthetic, so there may never have been a meaningful behavioral signal waiting to be found.</p>
+
+    <div class="study-callout reveal d1">
+      <span class="callout-label">What usability testing taught us</span>
+      <p>One takeaway from our usability study was that the synthetic nature of the dataset made the
+        findings feel less surprising and less actionable. Before selecting it, we explored multiple
+        publicly available dating-app datasets, but we could not find an authentic source containing
+        the combination of profile attributes, app behavior, likes received, and mutual matches needed
+        for this analysis. These findings should therefore be treated as illustrative rather than as
+        evidence of how real dating-app users behave.</p>
+    </div>
+
+    <div class="value-statement reveal d2">
+      <span class="callout-label">Why the project still matters</span>
+      <p>The value isn’t the answer; it’s the setup. The metric check, interactive explorer, and broader
+        outcome analysis form a reusable scaffold. Pointed at real dating-app data, a product manager
+        could quickly see which levers move matches, which user groups behave differently, and whether
+        the metric being reported is tracking meaningful success or just an illusion. We built the lens.
+        Real data would fill in the picture.</p>
     </div>
   </div>
+
+  <div class="product-guidance reveal d2" aria-label="Recommended product metrics">
+    <div class="product-guidance-header">
+      <span class="eyebrow">What this means for product teams</span>
+      <h3>Use match rate as context—not as the whole score.</h3>
+      <p>A stronger measurement strategy combines the ratio with the raw outcome and the steps that
+        lead to it. That makes it harder for a changing denominator to create a misleading success story.</p>
+    </div>
+
+    <div class="guidance-grid">
+      <article class="guidance-card">
+        <span class="guidance-number">01</span>
+        <h4>Track the user outcome</h4>
+        <p>Start with raw mutual matches so the metric reflects how many successful connections a user actually receives.</p>
+      </article>
+      <article class="guidance-card">
+        <span class="guidance-number">02</span>
+        <h4>Keep the denominator visible</h4>
+        <p>Review likes received alongside match rate so it is clear whether the percentage changed because attention changed.</p>
+      </article>
+      <article class="guidance-card">
+        <span class="guidance-number">03</span>
+        <h4>Measure the full journey</h4>
+        <p>Add the swipe-to-like-to-match funnel—and conversation or engagement quality when real product data makes it available.</p>
+      </article>
+    </div>
+    <p class="guidance-note">Conversation and engagement quality are recommended next-step measures; they are not available in the current dataset.</p>
+  </div>
+
+  <details class="methods reveal d3" id="methods">
+    <summary>Methods &amp; limitations</summary>
+    <div class="methods-content">
+      <div class="method-item">
+        <h3>Dataset</h3>
+        <p>We analyzed 50,000 synthetic profiles from the Kaggle “Dating App Behavior” dataset. The records simulate behavior on a fictional dating app.</p>
+      </div>
+      <div class="method-item">
+        <h3>Primary metric</h3>
+        <p>Match rate is calculated as mutual matches divided by likes received. We also examined raw likes received, mutual matches, swipe-right rate, and app-usage time.</p>
+      </div>
+      <div class="method-item">
+        <h3>Comparisons</h3>
+        <p>We compared group averages across gender, age group, income bracket, relationship intent, activity, profile completeness, and interests.</p>
+      </div>
+      <div class="method-item">
+        <h3>Interpretation</h3>
+        <p>This is descriptive analysis. The visualizations show associations and group averages; they do not establish that any trait or behavior causes a match outcome.</p>
+      </div>
+      <div class="method-warning">
+        <strong>Key limitation:</strong> Because the dataset is synthetic, the uniform patterns may reflect how the data was generated rather than how real dating-app users behave. The findings illustrate the analytical framework; they should not be read as real-world dating behavior.
+      </div>
+    </div>
+  </details>
 </section>
 
 <footer>
-  <b>DATASCI 209 · Summer 2026 · Group C</b><br>
-  Chelsea Fan · Curtis Chau · Sam Kim · Chris White<br>
-  Built for dating-app product managers, to see which user behaviors actually drive matches.<br>
-  Data: Kaggle "Dating App Behavior" dataset
+  <b>DATASCI 209 · Summer 2026 · Group C</b>
+  <div class="footer-actions" aria-label="Project resources">
+    <a class="footer-btn" href="https://www.kaggle.com/datasets/keyushnisar/dating-app-behavior-dataset" target="_blank" rel="noopener noreferrer">View dataset ↗</a>
+    <a class="footer-btn" href="#methods">Read methodology</a>
+    <a class="footer-btn" href="https://public.tableau.com/views/Dashboard_TheHunt/Dashboard?:showVizHome=yes" target="_blank" rel="noopener noreferrer">Open Tableau ↗</a>
+    <a class="footer-btn" href="#team">Meet the team</a>
+  </div>
+  <div class="team-line" id="team"><b>Chelsea Fan · Curtis Chau · Sam Kim · Chris White</b></div>
+  <div class="footer-note">
+    Built for dating-app product managers to examine which user behaviors appear to drive matches and whether the metric being optimized reflects meaningful success.<br>
+    Data: Kaggle “Dating App Behavior” dataset
+  </div>
 </footer>
 
 <script>
